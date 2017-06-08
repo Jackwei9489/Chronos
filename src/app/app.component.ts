@@ -17,6 +17,11 @@ export class AppComponent implements AfterViewInit {
   }
 
   openMenu () {
+    console.log(123);
     this.opened = !this.opened;
+  }
+
+  nextPage () {
+    $.fn.fullpage.moveSectionDown();
   }
 }
