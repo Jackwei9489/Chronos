@@ -6,7 +6,6 @@
 }
 .pagination{
   position: absolute;
-  top:15%;
   left:40px;
   z-index: 99;
   width:65px;
