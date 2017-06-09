@@ -82,7 +82,12 @@
   top:40%;
   right: 20px;
   width: 100px;
+  height:100px;
+  cursor: pointer;
   z-index: 1;
+}
+.baby.disabled{
+  /* TODO */
 }
 .section .joinForm{
   margin-top: 10%;

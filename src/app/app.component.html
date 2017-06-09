@@ -1,6 +1,6 @@
 <div class="the-container" [ngClass]="{slideRight: opened}">
   <nav class="navbar navbar-static-left nav-starked" id="navbar" role="navigation"
-       >
+  >
     <ul>
       <li class='li-logo'><img src="../assets/images/logo3.png" href="Adivce"></li>
       <li data-menuanchor="Home"><a href="#Home" align="center">Home</a></li>
@@ -20,7 +20,7 @@
       <div class="section">
         <ul class="main-menu">
           <li><a href="#Message">Message</a></li>
-          <li><a href="#contact" >Join Me</a></li>
+          <li><a href="#contact">Join Me</a></li>
           <li><a href="#information"> Update Scheduel</a></li>
         </ul>
         <div class="page1-main-im">
@@ -82,13 +82,16 @@
       <div class="section">
         <div class="bk-bg2">
           <div class="joinForm">
-            <form style="position: relative;">
-              <input class="ipt" placeholder="称呼">
-              <input class="ipt" placeholder="邮箱">
+            <form style="position: relative;" #commentForm="ngForm" novalidate>
+              <input class="ipt" name="name" placeholder="称呼" required [(ngModel)]="comment.name">
+              <input class="ipt" name="email" placeholder="邮箱" required [(ngModel)]="comment.email">
               <div>
-                <textarea class="ipt ta" placeholder="留言"></textarea>
+                <textarea class="ipt ta" name="message" placeholder="留言" required
+                          [(ngModel)]="comment.message"></textarea>
               </div>
-              <img class="baby" src="../assets/images/xiaoafter.png">
+              <a class="baby" (click)="addComment(commentForm)" [ngClass]="{disabled:!commentForm.valid}">
+                <img style="height: 100%" src="../assets/images/xiaoafter.png" >
+              </a>
               <p>Submit</p>
             </form>
             <div class="copy_right">
