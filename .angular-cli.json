@@ -20,7 +20,7 @@
       "prefix": "app",
       "styles": [
         "styles.css",
-        "../node_modules/fullpage.js/dist/jquery.fullpage.min.css"
+        "../node_modules/fullpage.js/dist/jquery.fullpage.css"
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.js",
