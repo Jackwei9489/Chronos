@@ -143,7 +143,7 @@
 }
 .member-intro{
   width: 1000px;
-  margin: -5% 10%;
+  margin: -5% 50px;
   text-align: left;
 
 }
@@ -371,7 +371,7 @@
   position: absolute;
   left: 500px;
   display: block;
-  width: 130px;
-  height: 80px;
+  width: 100px;
+  height: 50px;
   cursor: pointer;
 }
