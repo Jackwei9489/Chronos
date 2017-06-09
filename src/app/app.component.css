@@ -6,7 +6,7 @@
 }
 .pagination{
   position: absolute;
-  top:15%;
+  top:14%;
   left:40px;
   z-index: 99;
   width:65px;
@@ -151,7 +151,7 @@
   position: relative;
   display: inline-block;
   height: 250px;
-  width: 150px;
+  width: 130px;
   border: 1.5px solid black;
   z-index: 1;
   margin-left:25px;
@@ -164,7 +164,7 @@
   border-radius: 50%;
   z-index: 2;
   top: -50px;
-  left: 35px;
+  left: 25px;
   background: #fff;
 }
 .member-intro .break-line{
