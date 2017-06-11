@@ -19,9 +19,9 @@
     <div class="section-wrapper">
       <div class="section">
         <ul class="main-menu">
-          <li><a href="#Message">Message</a></li>
-          <li><a href="#contact">Join Us</a></li>
-          <li><a href="#information">Schedule</a></li>
+          <li><a href="#">Message</a></li>
+          <li><a href="#">Join Me</a></li>
+          <li><a href="#">Update Scheduel</a></li>
         </ul>
         <div class="page1-main-im">
           <img style="width: 100%;" src='../assets/images/tittle.png'>
@@ -31,18 +31,18 @@
       <div class="section">
         <img class="page1_02" src='../assets/images/page_02.png'>
         <div class="science-wrapper">
-          <img style="height: 130%;left: 30%" src="../assets/images/page2tittle.png">
-          <img class="arithmetic" style="left:13%;top:100%;" src="../assets/images/arithmetic.png">
-          <img class="translation" style="left:46%;top:100%;" src="../assets/images/translation.png">
+          <img style="height: 100%" src="../assets/images/page2tittle.png">
+          <img class="arithmetic" src="../assets/images/arithmetic.png">
+          <img class="translation" src="../assets/images/translation.png">
         </div>
 
       </div>
       <div class="section">
         <img class="art" src="../assets/images/page3tittle.png">
         <div class="music-wrapper">
-          <img src="../assets/images/music.png" style="bottom: 35%">
-          <img src="../assets/images/illustration.png" style="bottom: 55%">
-          <img src="../assets/images/article.png" style="bottom: 45%">
+          <img src="../assets/images/music.png" style="bottom: 50%">
+          <img src="../assets/images/illustration.png" style="bottom: 70%">
+          <img src="../assets/images/article.png" style="bottom: 60%">
         </div>
         <img class="page1_03" src='../assets/images/gaoqing3.png'>
         <div class="bk-bg"></div>
@@ -55,25 +55,19 @@
       </div>
       <div class="section">
         <div class="member-intro">
-          <div class="member-wrapper">
+          <div class="member-wrapper" *ngFor="let member of team">
             <div class="member-avatar"></div>
+            <span class="name">{{member.name}}</span>
             <div class="break-line"></div>
-          </div>
-          <div class="member-wrapper">
-            <div class="member-avatar"></div>
+            <div class="tag" >
+              <div class="tag-info" *ngFor="let info of member.tag" >
+                {{info}}
+              </div>
+            </div>
             <div class="break-line"></div>
-          </div>
-          <div class="member-wrapper">
-            <div class="member-avatar"></div>
-            <div class="break-line"></div>
-          </div>
-          <div class="member-wrapper">
-            <div class="member-avatar"></div>
-            <div class="break-line"></div>
-          </div>
-          <div class="member-wrapper">
-            <div class="member-avatar"></div>
-            <div class="break-line"></div>
+            <div class="abstract">
+              {{member.abstract}}
+            </div>
           </div>
         </div>
         <img class="page1_05" src='../assets/images/page5.png'>
@@ -83,10 +77,10 @@
         <div class="bk-bg2">
           <div class="joinForm">
             <form style="position: relative;" #commentForm="ngForm" novalidate>
-              <input class="ipt" name="name" placeholder="Name" required [(ngModel)]="comment.name">
-              <input class="ipt" name="email" placeholder="Email" required [(ngModel)]="comment.email">
+              <input class="ipt" name="name" placeholder="How would u like to be called" required [(ngModel)]="comment.name">
+              <input class="ipt" name="email" placeholder="Ur Email" required [(ngModel)]="comment.email" email="true">
               <div>
-                <textarea class="ipt ta" name="message" placeholder="Message" required
+                <textarea class="ipt ta" name="mes" placeholder="Comment" required
                           [(ngModel)]="comment.message"></textarea>
               </div>
               <a class="baby" (click)="addComment(commentForm)" [ngClass]="{disabled:!commentForm.valid}">
@@ -94,8 +88,8 @@
               </a>
               <p>Submit</p>
             </form>
-            <div class="copy_right" style="bottom:1%">
-              Copyright©2017-2018 All Rights Reserved
+            <div class="copy_right">
+              Copyright©2017-2018 Chronos All Rights Reserved
             </div>
           </div>
         </div>
