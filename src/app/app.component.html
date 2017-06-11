@@ -83,10 +83,10 @@
         <div class="bk-bg2">
           <div class="joinForm">
             <form style="position: relative;" #commentForm="ngForm" novalidate>
-              <input class="ipt" name="name" placeholder="称呼" required [(ngModel)]="comment.name">
-              <input class="ipt" name="email" placeholder="邮箱" required [(ngModel)]="comment.email">
+              <input class="ipt" name="name" placeholder="Name" required [(ngModel)]="comment.name">
+              <input class="ipt" name="email" placeholder="Email" required [(ngModel)]="comment.email">
               <div>
-                <textarea class="ipt ta" name="message" placeholder="留言" required
+                <textarea class="ipt ta" name="message" placeholder="Message" required
                           [(ngModel)]="comment.message"></textarea>
               </div>
               <a class="baby" (click)="addComment(commentForm)" [ngClass]="{disabled:!commentForm.valid}">
@@ -94,7 +94,7 @@
               </a>
               <p>Submit</p>
             </form>
-            <div class="copy_right">
+            <div class="copy_right" style="bottom: 2%">
               Copyright©2017-2018 All Rights Reserved
             </div>
           </div>
