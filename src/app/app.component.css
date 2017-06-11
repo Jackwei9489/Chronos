@@ -4,13 +4,23 @@
   color: #fff;
   clear: top;
 }
+
 .pagination{
   position: absolute;
   top:14%;
   left:40px;
   z-index: 99;
   width:65px;
+  cursor: pointer;
 }
+.pagination:after {
+  position: absolute;
+  top: 14%;
+  left:40px;
+  z-index:99;
+  width:65px;
+}
+
 .image-wrapper{
   position: absolute;
   left:0;
