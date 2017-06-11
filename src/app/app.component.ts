@@ -23,7 +23,7 @@ export class AppComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     $('#dowebok').fullpage({
       sectionsColor: ['#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF'],
-      anchors: ['Home', 'Science', 'Illustration', 'Music', 'Artical', 'About'],
+      anchors: ['Home', 'Science', 'Art', 'Project', 'Team', 'Message'],
       menu: '.navbr'
     });
   }
