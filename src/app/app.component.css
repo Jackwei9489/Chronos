@@ -30,7 +30,7 @@
 }
 .page1_02,.page1_01,.page1_03,.page1_04,.page1_05{
   position:absolute;
-  width:45%;
+  width:40%;
   right:0;
 }
 .page1_01{
@@ -157,13 +157,14 @@
   width: 620px!important;
   height: 300px!important;
   padding-left: 0!important;
-  text-indent: 10px;
+  text-indent: 20px;
 }
 .member-intro{
+  position: relative;
   width: 1000px;
   margin: -5% 50px;
   text-align: center;
-
+  height: 254px;
 }
 .member-wrapper{
   position: relative;
@@ -172,9 +173,13 @@
   border: 2px solid black;
   z-index: 1;
   margin-left:25px;
+  height: 250px;
+}
+.member-wrapper .tag{
+  height: 100px;
 }
 .member-intro .member-avatar{
-  margin: -60px auto;
+  margin: -64px auto;
   width: 120px;
   height: 120px;
   border:4px solid black;
@@ -366,10 +371,11 @@
 
 .science-wrapper .arithmetic{
   position: absolute;
-  top: 80%;
-  left: 60px;
-  width: 100px;
-  cursor: pointer;
+  bottom: 40px;
+  width: 100%;
+  padding-right: 60px;
+  box-sizing: border-box;
+  text-align: center;
 }
 .science-wrapper .translation{
   position: absolute;
@@ -380,14 +386,15 @@
 
 }
 
+.music-wrapper{
+  position: relative;
+  width: 200px;
+  margin: 0 500px;
+  z-index: 2;
+}
 .music-wrapper img{
-  position: absolute;
-  left: 500px;
-  display: block;
-  z-index: 1000;
   width: 100px;
   height: 50px;
-  cursor: pointer;
 }
 .member-wrapper .name{
   display: block;
@@ -406,6 +413,7 @@
   color: black;
   padding-left: 10px;
   border-bottom: 1px solid black;
+  height: 20px;
 }
 .tag .tag-info:last-of-type{
   border: 0;
@@ -423,7 +431,7 @@
 .schedule{
   display: none;
   position: absolute;
-  width: 200px;
+  width: 300px;
   right: 220px;
   top: 50px;
   background: black;
@@ -543,4 +551,43 @@
   bottom: 14px;
   left: 14px;
   -webkit-animation-delay:1.04s;
+}
+
+.project-wrapper{
+  position: relative;
+  width: 600px;
+  height: 400px;
+  left:160px;
+  top:-40px;
+  z-index: 2;
+}
+.project-wrapper .btn-wrapper{
+  position: absolute;
+  bottom: 40px;
+  text-align: center;
+}
+.project-wrapper a{
+  display: inline-block;
+  width: 100px;
+  bottom: 40px;
+}
+.project-wrapper a img{
+  width: 100%;
+}
+.myButton {
+  -moz-border-radius:28px;
+  -webkit-border-radius:28px;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-size:17px;
+  text-decoration:none;
+  text-shadow:0 1px 0 #2f6627;
+}
+.myButton:hover {
+  border-color: red;
+}
+.myButton:active {
+  position:relative;
+  top:1px;
 }

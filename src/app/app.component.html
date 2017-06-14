@@ -51,7 +51,7 @@
           </div>
         </div>
         <div class="page1-main-im">
-          <img style="width: 100%;" src='../assets/images/tittle.png'>
+          <img style="width: 100%;" src='../assets/images/tittle3.png'>
         </div>
         <img class="page1_01" src='../assets/images/page_01.png'>
       </div>
@@ -59,17 +59,29 @@
         <img class="page1_02" src='../assets/images/page_02.png'>
         <div class="science-wrapper">
           <img style="height: 100%;width: 100%" src="../assets/images/page2tittle.png">
-          <img class="arithmetic" src="../assets/images/arithmetic.png">
-          <img class="translation" src="../assets/images/translation.png">
+          <div class="math-wrapper arithmetic">
+            <a  class="myButton" style="display: inline-block;width: 100px">
+              <img  src="../assets/images/arithmetic.png" style="width: 100%;height: 100%">
+            </a>
+            <a class="myButton" style="display: inline-block;width: 100px">
+              <img  src="../assets/images/translation.png" style="width: 100%;height: 100%">
+            </a>
+          </div>
         </div>
 
       </div>
       <div class="section">
         <img class="art" src="../assets/images/page3tittle.png">
         <div class="music-wrapper">
-          <img src="../assets/images/music.png" style="bottom: 35%">
-          <img src="../assets/images/illustration.png" style="bottom: 55%">
-          <img src="../assets/images/article.png" style="bottom: 45%">
+          <a style="bottom: 35%" class="myButton">
+            <img src="../assets/images/music.png">
+          </a>
+          <a style="bottom: 55%" class="myButton">
+            <img src="../assets/images/illustration.png">
+          </a>
+          <a style="bottom: 45%" class="myButton">
+            <img src="../assets/images/article.png">
+          </a>
         </div>
         <img class="page1_03" src='../assets/images/gaoqing3.png'>
         <div class="bk-bg"></div>
@@ -77,8 +89,21 @@
       <div class="section">
 
         <img class="page1_04" src='../assets/images/page4.png'>
-        <div class="bk-bg2">
-        </div>
+          <div class="project-wrapper">
+            <img src="../assets/images/project.png" style="width: 100%;height: 100%">
+            <div class="btn-wrapper" style="width: 100%;overflow: hidden">
+              <a class="myButton">
+                <img src="../assets/images/ai.png">
+              </a>
+              <a class="myButton">
+                <img src="../assets/images/spider.png">
+              </a>
+              <a class="myButton">
+                <img src="../assets/images/web.png">
+              </a>
+            </div>
+
+          </div>
       </div>
       <div class="section">
         <div class="member-intro">
@@ -104,11 +129,13 @@
         <div class="bk-bg2">
           <div class="joinForm">
             <form style="position: relative;" #commentForm="ngForm" novalidate>
-              <input mdTooltip="必填" [mdTooltipPosition]="'before'" class="ipt" name="name" placeholder="How would u like to be called" required
+              <input mdTooltip="必填" [mdTooltipPosition]="'before'" class="ipt" name="name"
+                     placeholder="How would u like to be called" required
                      [(ngModel)]="comment.name" #name="ngModel" [ngClass]="{invalid: !name.valid && submitted}">
               <input class="ipt" name="email" placeholder="Ur Email(Optional)" [(ngModel)]="comment.email">
               <div>
-                <textarea mdTooltip="必填" [mdTooltipPosition]="'before'" class="ipt ta" name="mes" #mes = "ngModel" placeholder="Comment" required
+                <textarea mdTooltip="必填" [mdTooltipPosition]="'before'" class="ipt ta" name="mes" #mes="ngModel"
+                          placeholder="Comment" required
                           [(ngModel)]="comment.message" [ngClass]="{invalid: !mes.valid && submitted}"></textarea>
               </div>
               <a class="baby" (click)="addComment(commentForm)" [ngClass]="{disabled:!commentForm.valid}">
