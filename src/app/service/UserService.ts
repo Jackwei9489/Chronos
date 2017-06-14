@@ -26,4 +26,9 @@ export class UserService {
     const uri = 'team';
     return this.http.get(serverURL + uri).map(response => response.json() as ResultModel);
   }
+
+  fetchSchedule() {
+    const uri = 'schedule';
+    return this.http.get(serverURL + uri).map(response => response.json() as ResultModel);
+  }
 }

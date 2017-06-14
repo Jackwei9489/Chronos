@@ -19,10 +19,37 @@
     <div class="section-wrapper">
       <div class="section">
         <ul class="main-menu">
-          <li><a href="#">Message</a></li>
+          <li><a href="#Message">Message</a></li>
           <li><a href="#">Join Us</a></li>
-          <li><a href="#">Schedule</a></li>
+          <li><a href="#" (click)="show()">Schedule</a></li>
         </ul>
+        <div class="schedule" [ngClass]="{show: clicked}">
+          <div class="triangle_border_up">
+            <span></span>
+          </div>
+          <div class="item">
+            <div class="title">Item</div>
+          </div>
+          <div class="ddl">
+            <div class="title">DealLine</div>
+          </div>
+          <ul style="margin-top:40px" *ngIf="schedule.length > 0">
+            <li *ngFor="let item of schedule">
+              <span class="name">{{item.name}}</span>
+              <span class="ddl">{{item.deadline}}</span>
+            </li>
+          </ul>
+          <div class="loadEffect" *ngIf="schedule.length === 0">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
         <div class="page1-main-im">
           <img style="width: 100%;" src='../assets/images/tittle.png'>
         </div>
@@ -59,8 +86,8 @@
             <div class="member-avatar"></div>
             <span class="name">{{member.name}}</span>
             <div class="break-line"></div>
-            <div class="tag" >
-              <div class="tag-info" *ngFor="let info of member.tag" >
+            <div class="tag">
+              <div class="tag-info" *ngFor="let info of member.tag">
                 {{info}}
               </div>
             </div>
@@ -77,16 +104,17 @@
         <div class="bk-bg2">
           <div class="joinForm">
             <form style="position: relative;" #commentForm="ngForm" novalidate>
-              <input class="ipt" name="name" placeholder="How would u like to be called" required [(ngModel)]="comment.name">
-              <input class="ipt" name="email" placeholder="Ur Email" required [(ngModel)]="comment.email" email="true">
+              <input mdTooltip="必填" [mdTooltipPosition]="'before'" class="ipt" name="name" placeholder="How would u like to be called" required
+                     [(ngModel)]="comment.name" #name="ngModel" [ngClass]="{invalid: !name.valid && submitted}">
+              <input class="ipt" name="email" placeholder="Ur Email(Optional)" [(ngModel)]="comment.email">
               <div>
-                <textarea class="ipt ta" name="mes" placeholder="Comment" required
-                          [(ngModel)]="comment.message"></textarea>
+                <textarea mdTooltip="必填" [mdTooltipPosition]="'before'" class="ipt ta" name="mes" #mes = "ngModel" placeholder="Comment" required
+                          [(ngModel)]="comment.message" [ngClass]="{invalid: !mes.valid && submitted}"></textarea>
               </div>
               <a class="baby" (click)="addComment(commentForm)" [ngClass]="{disabled:!commentForm.valid}">
-                <img style="height: 100%" src="../assets/images/xiaoafter.png" >
+                <img style="height: 100%" src="../assets/images/xiaoafter.png">
               </a>
-              <p>Submit</p>
+              <p class="submit">Submit</p>
             </form>
             <div class="copy_right">
               Copyright©2017-2018 Chronos All Rights Reserved
