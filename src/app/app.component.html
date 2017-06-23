@@ -11,18 +11,15 @@
       <li data-menuanchor="Message"><a href="#Message" align="center">Message</a></li>
     </ul>
   </nav>
-  <div class="image-wrapper">
+  <div class="image-wrapper col-md-1  col-xs-3">
     <img class="menu-button" src='../assets/images/menu_button.png' (click)="openMenu()">
+    <img class="pagination" src='../assets/images/down2.png' (click)="nextPage()">
   </div>
-  <img class="pagination" src='../assets/images/down2.png' (click)="nextPage()">
+
   <div id="dowebok">
     <div class="section-wrapper">
       <div class="section">
-        <ul class="main-menu">
-          <li><a href="#Message">Message</a></li>
-          <li><a href="#">Join Us</a></li>
-          <li><a href="#" (click)="show()">Schedule</a></li>
-        </ul>
+
         <div class="schedule" [ngClass]="{show: clicked}">
           <div class="triangle_border_up">
             <span></span>
@@ -31,7 +28,7 @@
             <div class="title">Item</div>
           </div>
           <div class="ddl">
-            <div class="title">DealLine</div>
+            <div class="title">DeadLine</div>
           </div>
           <ul style="margin-top:40px" *ngIf="schedule.length > 0">
             <li *ngFor="let item of schedule">
@@ -50,22 +47,39 @@
             <span></span>
           </div>
         </div>
-        <div class="page1-main-im">
-          <img style="width: 100%;" src='../assets/images/tittle3.png'>
+
+        <div class="col-md-4 col-xs-12 col-md-offset-8" style="position: absolute;top: 0">
+          <ul class="main-menu clearfix">
+            <li><a href="#Message">Message</a></li>
+            <li><a href="#">Join Us</a></li>
+            <li><a href="#" (click)="show()">Schedule</a></li>
+          </ul>
         </div>
-        <img class="page1_01" src='../assets/images/page_01.png'>
+        <div class="page1-main-im col-md-11 col-xs-9 col-md-offset-1 col-xs-offset-3" style="position: absolute;top: 10%;">
+          <img style="max-width: 100%;max-height: 100%" src='../assets/images/tittle3.png'>
+        </div>
+        <div class="col-md-12 col-xs-12" style="padding-left: 50%;position: absolute;bottom: 0">
+          <img class="" src='../assets/images/page_01.png' style="width: 100%">
+        </div>
+
       </div>
       <div class="section">
-        <img class="page1_02" src='../assets/images/page_02.png'>
-        <div class="science-wrapper">
+        <div class="col-md-4 col-xs-4 col-sm-4" style="position: absolute;right: 0;height: 100%;top:0;bottom: 0">
+          <img class="page1_02" src='../assets/images/page_02.png'>
+        </div>
+        <div class="science-wrapper col-md-5 col-xs-5">
           <img style="height: 100%;width: 100%" src="../assets/images/page2tittle.png">
-          <div class="math-wrapper arithmetic">
-            <a  class="myButton" style="display: inline-block;width: 100px">
-              <img  src="../assets/images/arithmetic.png" style="width: 100%;height: 100%">
-            </a>
-            <a class="myButton" style="display: inline-block;width: 100px">
-              <img  src="../assets/images/translation.png" style="width: 100%;height: 100%">
-            </a>
+          <div class=" math-wrapper arithmetic col-md-9 col-xs-9">
+            <div class="col-md-6 col-xs-6">
+              <a class="myButton">
+                <img src="../assets/images/arithmetic.png" style="width: 100%;height: 100%">
+              </a>
+            </div>
+            <div class="col-md-6 col-xs-6">
+              <a class="myButton">
+                <img src="../assets/images/translation.png" style="width: 100%;height: 100%">
+              </a>
+            </div>
           </div>
         </div>
 
@@ -89,21 +103,21 @@
       <div class="section">
 
         <img class="page1_04" src='../assets/images/page4.png'>
-          <div class="project-wrapper">
-            <img src="../assets/images/project.png" style="width: 100%;height: 100%">
-            <div class="btn-wrapper" style="width: 100%;overflow: hidden">
-              <a class="myButton">
-                <img src="../assets/images/ai.png">
-              </a>
-              <a class="myButton">
-                <img src="../assets/images/spider.png">
-              </a>
-              <a class="myButton">
-                <img src="../assets/images/web.png">
-              </a>
-            </div>
-
+        <div class="project-wrapper">
+          <img src="../assets/images/project.png" style="width: 100%;height: 100%">
+          <div class="btn-wrapper" style="width: 100%;overflow: hidden">
+            <a class="myButton">
+              <img src="../assets/images/ai.png">
+            </a>
+            <a class="myButton">
+              <img src="../assets/images/spider.png">
+            </a>
+            <a class="myButton">
+              <img src="../assets/images/web.png">
+            </a>
           </div>
+
+        </div>
       </div>
       <div class="section">
         <div class="member-intro">
